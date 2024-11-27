@@ -1,17 +1,15 @@
 package com.example.healthy_life.dao.bean;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.healthy_life.R;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends Activity {
 
     private EditText editEmailAcesso;
     private EditText editSenhaAcesso;
@@ -41,7 +39,6 @@ public class LoginActivity extends AppCompatActivity {
              public void onClick(View v) {
                  Intent it = new Intent(LoginActivity.this, RegistroActivity.class);
                  startActivity(it);
-
              }
          });
 
