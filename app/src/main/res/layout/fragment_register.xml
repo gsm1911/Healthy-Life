@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".auth.LoginFragment">
+    tools:context=".auth.RegisterFragment"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,11 +24,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="200dp"
+            android:layout_marginBottom="20dp"
             android:text="Treine sua mente e seu corpo"
             android:textColor="@color/white"
             android:textSize="15dp"
             android:gravity="center"
+            android:paddingBottom="60dp"
             />
 
 
@@ -35,54 +37,57 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Acesse sua conta"
+            android:text="Crie sua conta"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:gravity="center"
             android:layout_marginBottom="10dp"
             />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit_text"
+            android:padding="10dp"
+            android:hint="Nome"
+            android:layout_marginBottom="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit_text"
+            android:padding="10dp"
+            android:hint="E-mail"
+            android:layout_marginBottom="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit_text"
+            android:padding="10dp"
+            android:hint="Senha"
+            android:layout_marginBottom="10dp"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_edit_text"
             android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:hint="E-mail"/>
-
-
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_edit_text"
-            android:padding="10dp"
-            android:hint="Senha"/>
+            android:hint="Confirme a sehna"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Criar e acessar"
             android:layout_marginTop="15dp"
             android:background="@drawable/bg_edit_botton"
             android:textColor="@color/Cinza"
             android:textAllCaps="false"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="70dp"
             />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="Ainda não tem acesso?"
-            android:textColor="@color/white"
-            android:textSize="17dp"
-            android:gravity="center"
-            />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Criar conta"
+            android:text="Voltar para o login"
             android:layout_marginTop="15dp"
             android:background="@drawable/bg_edit_botton"
             android:textColor="@color/Cinza"
