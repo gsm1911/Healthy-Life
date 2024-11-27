@@ -1,6 +1,7 @@
 package com.example.healthy_life.dao.bean;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -26,8 +27,20 @@ public class LoginActivity extends AppCompatActivity {
          editSenhaAcesso = findViewById(R.id.editSenhaAcesso);
 
          btnLogin = findViewById(R.id.btnLogin);
+         btnLogin.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+
+             }
+         });
 
          btnCriarConta = findViewById(R.id.btnCriarConta);
+         btnCriarConta.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+
+             }
+         });
 
 
     }
