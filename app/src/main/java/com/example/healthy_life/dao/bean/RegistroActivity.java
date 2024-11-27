@@ -1,4 +1,4 @@
-package com.example.healthy_life;
+package com.example.healthy_life.dao.bean;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.healthy_life.R;
 
 public class RegistroActivity extends AppCompatActivity{
     private EditText editNomeRegistro;
