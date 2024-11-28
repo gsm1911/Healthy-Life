@@ -2,12 +2,16 @@ package com.example.healthy_life;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.health.connect.datatypes.units.Length;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
+
+import com.example.healthy_life.database.dao.UsuarioDao;
+import com.example.healthy_life.database.model.UsuarioModel;
 
 public class RegistroActivity extends Activity {
     private EditText editNomeRegistro;
@@ -18,6 +22,8 @@ public class RegistroActivity extends Activity {
     private Button btnCriarConta;
 
     private Button btnVoltarParaLogin;
+
+    private UsuarioDao usuarioDao;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState){
@@ -39,6 +45,22 @@ public class RegistroActivity extends Activity {
                     mensagemErroApresentar("A senha não pode estar vazia.");
                 } else if (!editSenhaConfirma.getText().toString().equals(editConfirmarEmail.getText().toString())){
                     mensagemErroApresentar("As senhas não coincide.");
+                }
+                else{
+                    //Salvando Usuario
+                    usuarioDao = new UsuarioDao(RegistroActivity.this);
+
+                    UsuarioModel usuarioModel = new UsuarioModel();
+
+                    usuarioModel.setNome(editNomeRegistro.getText().toString());
+                    usuarioModel.setEmail(editEmailRegistro.getText().toString());
+                    usuarioModel.setSenha(editSenhaRegistro.getText().toString());
+                    if(usuarioDao.insert(usuarioModel) != -1){
+                        Toast.makeText(RegistroActivity.this, "Usuário salvo", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(RegistroActivity.this, "Falha ao salvar usuário", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
 
