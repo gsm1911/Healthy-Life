@@ -1,6 +1,7 @@
 package com.example.healthy_life.dao.bean;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -16,6 +17,8 @@ public class RegistroActivity extends Activity {
     private EditText editSenhaRegistro;
     private EditText editSenhaConfirma;
     private Button btnCriarConta;
+
+    private Button btnVoltarParaLogin;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState){
@@ -44,6 +47,16 @@ public class RegistroActivity extends Activity {
                 Toast.makeText(RegistroActivity.this, s, Toast.LENGTH_SHORT).show();
             }
         });
+
+        btnVoltarParaLogin = findViewById(R.id.btnVoltarParaLogin);
+        btnVoltarParaLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(RegistroActivity.this, LoginActivity.class);
+                startActivity(it);
+            }
+        });
+
 
     }
 }
