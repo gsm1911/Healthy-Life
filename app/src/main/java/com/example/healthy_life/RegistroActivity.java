@@ -1,4 +1,4 @@
-package com.example.healthy_life.dao.bean;
+package com.example.healthy_life;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
-import com.example.healthy_life.R;
 
 public class RegistroActivity extends Activity {
     private EditText editNomeRegistro;

@@ -1,4 +1,4 @@
-package com.example.healthy_life.dao.bean;
+package com.example.healthy_life;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.annotation.Nullable;
-import com.example.healthy_life.R;
 
 public class LoginActivity extends Activity {
 
