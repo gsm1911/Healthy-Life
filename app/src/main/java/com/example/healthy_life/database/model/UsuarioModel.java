@@ -1,7 +1,7 @@
 package com.example.healthy_life.database.model;
 
 public class UsuarioModel {
-    public static String TABBLE_NAME = "tb_usuarios";
+    public static String TABLE_NAME = "tb_usuarios";
     public static String
             COLUNA_ID = "_id",
             COLUNA_NOME = "nome",
@@ -43,7 +43,7 @@ public class UsuarioModel {
     }
 
     public static String
-    CREATE_TABLE = "CREATE TABLE" + TABBLE_NAME
+    CREATE_TABLE = "CREATE TABLE" + TABLE_NAME
             +"( "
             + COLUNA_ID + " INTERGER PRIMARY KEY AUTOINCREMENTE,"
             + COLUNA_NOME + " TEXT NOT NULL,"
@@ -52,7 +52,7 @@ public class UsuarioModel {
             + " );";
 
     public static String
-    DROP_TABLE = "DROP TABLE IF EXISTS " +TABBLE_NAME;
+    DROP_TABLE = "DROP TABLE IF EXISTS " +TABLE_NAME;
 
 
 }
