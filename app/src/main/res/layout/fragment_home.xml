@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cinza_Escuro"
+    tools:context=".auth.HomeFragment">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center">
+
+
+
+        <TextView
+            android:layout_width="364dp"
+            android:layout_height="26dp"
+            android:gravity="left"
+            android:text=" Exercícios"
+            android:textColor="@color/Cinza_Claro"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+        <TextView
+            android:layout_width="364dp"
+            android:layout_height="83dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/bg_edit_text_black"
+            android:gravity="left|center"
+            android:text=" Exercício exemplo 1"
+            android:textColor="@color/white"
+            android:textFontWeight="600"
+            android:textSize="30dp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+        <TextView
+            android:layout_width="364dp"
+            android:layout_height="83dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/bg_edit_text_black"
+            android:gravity="left|center"
+            android:text=" Exercício exemplo 2"
+            android:textColor="@color/white"
+            android:textFontWeight="600"
+            android:textSize="30dp" />
+        <TextView
+            android:layout_width="364dp"
+            android:layout_height="83dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/bg_edit_text_black"
+            android:gravity="left|center"
+            android:text=" Exercício exemplo 3"
+            android:textColor="@color/white"
+            android:textFontWeight="600"
+            android:textSize="30dp" />
+        <TextView
+            android:layout_width="364dp"
+            android:layout_height="83dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/bg_edit_text_black"
+            android:gravity="left|center"
+            android:text=" Exercício exemplo 4"
+            android:textColor="@color/white"
+            android:textFontWeight="600"
+            android:textSize="30dp" />
+        <TextView
+            android:layout_width="364dp"
+            android:layout_height="83dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/bg_edit_text_black"
+            android:gravity="left|center"
+            android:text=" Exercício exemplo 5"
+            android:textColor="@color/white"
+            android:textFontWeight="600"
+            android:textSize="30dp" />
+
+
+    </LinearLayout>
+</ScrollView>
