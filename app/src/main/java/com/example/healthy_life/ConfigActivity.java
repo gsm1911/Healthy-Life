@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
@@ -16,6 +17,8 @@ import com.example.healthy_life.database.dao.UsuarioDao;
 import com.example.healthy_life.database.model.UsuarioModel;
 
 public class ConfigActivity extends Activity {
+    public static String emailUsuario;
+    public static String senhaUsuario;
     private Button btnDelete;
 
     private Button btnAtualizarSenha;
@@ -28,6 +31,12 @@ public class ConfigActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_config);
 
+        UsuarioModel usuarioModel = new UsuarioModel();
+        usuarioModel.setEmail(emailUsuario);
+        usuarioModel.setSenha(senhaUsuario);
+
+        editSenhaAntiga = findViewById(R.id.editSenhaAntiga);
+        editSenhaNova = findViewById(R.id.editSenhaNova);
         btnAtualizarSenha = findViewById(R.id.btnAtualizarSenha);
         btnAtualizarSenha.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,17 +49,22 @@ public class ConfigActivity extends Activity {
                 else if (editSenhaNova.getText().toString().isEmpty()){
                     alertDialogShow( "Campo obrigatório");
                 }
+                else if(!editSenhaAntiga.getText().toString().equals(senhaUsuario)){
+                    alertDialogShow("Senha incorreta.");
+                }
+                else if(editSenhaNova.getText().toString().equals(senhaUsuario)){
+                    alertDialogShow("A senha nova não pode ser a mesma que a velha.");
+                }
                 else {
 
-                    UsuarioModel usuarioModel = new UsuarioModel();
-                    usuarioModel.setSenha(editSenhaNova.getText().toString());
                     usuarioDao = new UsuarioDao(ConfigActivity.this);
-                    if(usuarioDao.select(usuarioModel)){
-                        startActivity(new Intent(ConfigActivity.this, HomeActivity.class));
+                    if(usuarioDao.atualizarSenha(usuarioModel, editSenhaNova.getText().toString())){
+                        senhaUsuario = editSenhaNova.getText().toString();
+                        Toast.makeText(ConfigActivity.this, "Senha alterada.", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(ConfigActivity.this, LoginActivity.class));
                     }
                     else{
-                        alertDialogShow( "Usuario ou senha invalidos");
-
+                        alertDialogShow( "Falha ao alterar senha.");
                     }
 
                 }

@@ -50,6 +50,9 @@ public class LoginActivity extends Activity {
                      usuarioModel.setEmail(editEmailAcesso.getText().toString());
                      usuarioModel.setSenha(editSenhaAcesso.getText().toString());
                      usuarioDao = new UsuarioDao(LoginActivity.this);
+                     ConfigActivity.emailUsuario = editEmailAcesso.getText().toString();
+                     ConfigActivity.senhaUsuario = editSenhaAcesso.getText().toString();
+
                      if(usuarioDao.select(usuarioModel)){
                          startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                      }
