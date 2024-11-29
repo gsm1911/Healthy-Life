@@ -3,78 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Cinza_Escuro"
+    android:background="@drawable/healthy_life_home_screen_legit"
     tools:context=".auth.HomeFragment">
 
-    <LinearLayout
 
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnConfig"
+        android:layout_width="396dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:gravity="center">
+        android:text=""
+        android:layout_marginTop="860dp"
+        android:layout_marginLeft="10dp"
+        android:background=""
+        android:textColor="@color/Cinza"
+        />
 
-        <TextView
-            android:layout_width="364dp"
-            android:layout_height="26dp"
-            android:gravity="left"
-            android:text=" Exercícios"
-            android:textColor="@color/Cinza_Claro"
-            android:layout_marginBottom="10dp"
-            android:textSize="20sp"
-            tools:ignore="HardcodedText,RtlHardcoded" />
-        <TextView
-            android:layout_width="364dp"
-            android:layout_height="83dp"
-            android:layout_marginBottom="40dp"
-            android:background="@drawable/bg_edit_text_black"
-            android:gravity="left|center"
-            android:text=" Exercício exemplo 1"
-            android:textColor="@color/white"
-            android:textFontWeight="600"
-            android:textSize="30dp"
-            tools:ignore="HardcodedText,RtlHardcoded" />
-        <TextView
-            android:layout_width="364dp"
-            android:layout_height="83dp"
-            android:layout_marginBottom="40dp"
-            android:background="@drawable/bg_edit_text_black"
-            android:gravity="left|center"
-            android:text=" Exercício exemplo 2"
-            android:textColor="@color/white"
-            android:textFontWeight="600"
-            android:textSize="30dp" />
-        <TextView
-            android:layout_width="364dp"
-            android:layout_height="83dp"
-            android:layout_marginBottom="40dp"
-            android:background="@drawable/bg_edit_text_black"
-            android:gravity="left|center"
-            android:text=" Exercício exemplo 3"
-            android:textColor="@color/white"
-            android:textFontWeight="600"
-            android:textSize="30dp" />
-        <TextView
-            android:layout_width="364dp"
-            android:layout_height="83dp"
-            android:layout_marginBottom="40dp"
-            android:background="@drawable/bg_edit_text_black"
-            android:gravity="left|center"
-            android:text=" Exercício exemplo 4"
-            android:textColor="@color/white"
-            android:textFontWeight="600"
-            android:textSize="30dp" />
-        <TextView
-            android:layout_width="364dp"
-            android:layout_height="83dp"
-            android:layout_marginBottom="40dp"
-            android:background="@drawable/bg_edit_text_black"
-            android:gravity="left|center"
-            android:text=" Exercício exemplo 5"
-            android:textColor="@color/white"
-            android:textFontWeight="600"
-            android:textSize="30dp" />
-
-
-    </LinearLayout>
 </ScrollView>

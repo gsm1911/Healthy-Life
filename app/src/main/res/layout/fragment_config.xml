@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/healthy_life_config_screen_legit"
+    tools:context=".auth.ConfigFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/editSenhaAntiga"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/bg_edit_text_black"
+        android:layout_marginTop="552dp"
+        android:padding="10dp"
+        android:hint="Senha Antiga"
+        android:textColorHint="@color/white"
+        android:layout_marginBottom="15dp"/>
+
+    <EditText
+        android:id="@+id/editSenhaNova"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_edit_text_black"
+        android:padding="10dp"
+        android:hint="Senha Nova"
+        android:textColorHint="@color/white"
+        android:layout_marginBottom="10dp"/>
+
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_edit_text_black"
+        android:text="Atualizar senha"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnAtualizarSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edit_text_red"
+        android:text="Deletar conta"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+
+    </LinearLayout>
+</ScrollView>

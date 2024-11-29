@@ -16,13 +16,9 @@ import com.example.healthy_life.database.model.UsuarioModel;
 public class RegistroActivity extends Activity {
     private EditText editNomeRegistro;
     private EditText editEmailRegistro;
-    private EditText editConfirmarEmail;
     private EditText editSenhaRegistro;
     private EditText editSenhaConfirma;
     private Button btnCriarConta;
-
-    private Button btnCriarContaRegistro;
-
     private Button btnVoltarParaLogin;
 
     private UsuarioDao usuarioDao;
@@ -80,14 +76,6 @@ public class RegistroActivity extends Activity {
             }
         });
 
-        btnCriarContaRegistro = findViewById(R.id.btnCriarConta);
-        btnCriarContaRegistro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent it = new Intent(RegistroActivity.this, LoginActivity.class);
-                startActivity(it);
-            }
-        });
 
 
     }

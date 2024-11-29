@@ -55,7 +55,6 @@ public class LoginActivity extends Activity {
                      }
                      else{
                          alertDialogShow( "Usuario ou senha invalidos");
-
                      }
 
                  }
