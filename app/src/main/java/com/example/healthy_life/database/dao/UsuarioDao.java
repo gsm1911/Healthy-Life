@@ -23,7 +23,7 @@ public class UsuarioDao extends AbstractDao {
             values.put(UsuarioModel.COLUNA_EMAIL,usuarioModel.getEmail());
             values.put(UsuarioModel.COLUNA_SENHA,usuarioModel.getSenha());
 
-            resultado = db.insert(UsuarioModel.TABBLE_NAME,null,values);
+            resultado = db.insert(UsuarioModel.TABLE_NAME,null,values);
         }
         finally {
             Close();

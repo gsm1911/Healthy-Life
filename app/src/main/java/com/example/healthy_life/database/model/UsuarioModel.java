@@ -43,9 +43,9 @@ public class UsuarioModel {
     }
 
     public static String
-    CREATE_TABLE = "CREATE TABLE" + TABLE_NAME
+    CREATE_TABLE = "CREATE TABLE " + TABLE_NAME
             +"( "
-            + COLUNA_ID + " INTERGER PRIMARY KEY AUTOINCREMENTE,"
+            + COLUNA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + COLUNA_NOME + " TEXT NOT NULL,"
             + COLUNA_EMAIL + " TEXT NOT NULL,"
             + COLUNA_SENHA + " TEXT NOT NULL"
