@@ -51,7 +51,7 @@ public class LoginActivity extends Activity {
                      usuarioModel.setSenha(editSenhaAcesso.getText().toString());
                      usuarioDao = new UsuarioDao(LoginActivity.this);
                      if(usuarioDao.select(usuarioModel)){
-                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                         startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                      }
                      else{
                          alertDialogShow( "Usuario ou senha invalidos");
