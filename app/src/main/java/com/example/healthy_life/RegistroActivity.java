@@ -21,6 +21,8 @@ public class RegistroActivity extends Activity {
     private EditText editSenhaConfirma;
     private Button btnCriarConta;
 
+    private Button btnCriarContaRegistro;
+
     private Button btnVoltarParaLogin;
 
     private UsuarioDao usuarioDao;
@@ -71,6 +73,15 @@ public class RegistroActivity extends Activity {
 
         btnVoltarParaLogin = findViewById(R.id.btnVoltarParaLogin);
         btnVoltarParaLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(RegistroActivity.this, LoginActivity.class);
+                startActivity(it);
+            }
+        });
+
+        btnCriarContaRegistro = findViewById(R.id.btnCriarConta);
+        btnCriarContaRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(RegistroActivity.this, LoginActivity.class);

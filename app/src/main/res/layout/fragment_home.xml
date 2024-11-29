@@ -14,8 +14,6 @@
         android:padding="20dp"
         android:gravity="center">
 
-
-
         <TextView
             android:layout_width="364dp"
             android:layout_height="26dp"

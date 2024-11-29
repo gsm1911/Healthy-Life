@@ -30,8 +30,8 @@ public class UsuarioDao extends AbstractDao {
 
         try{
             Open();
-            Cursor cursor = db.query(UsuarioModel.TABLE_NAME, colunas, UsuarioModel.COLUNA_EMAIL = " = ? AND "
-                    + UsuarioModel.COLUNA_SENHA + " = ? ", new String[]{usuarioModel.getEmail(), usuarioModel.getSenha()}, null, null, null);
+            Cursor cursor = db.query(UsuarioModel.TABLE_NAME, colunas, UsuarioModel.COLUNA_EMAIL + " = ? AND "
+                    + UsuarioModel.COLUNA_SENHA + " = ?", new String[]{usuarioModel.getEmail(), usuarioModel.getSenha()}, null, null, null);
             cursor.moveToFirst();
             return cursor.getCount() > 0;
         }
