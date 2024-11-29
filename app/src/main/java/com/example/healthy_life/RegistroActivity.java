@@ -43,7 +43,7 @@ public class RegistroActivity extends Activity {
                     mensagemErroApresentar("O E-mail não pode estar vazio.");
                 } else if(editSenhaRegistro.getText().toString().isEmpty()){
                     mensagemErroApresentar("A senha não pode estar vazia.");
-                } else if (!editSenhaConfirma.getText().toString().equals(editConfirmarEmail.getText().toString())){
+                } else if (!editSenhaConfirma.getText().toString().equals(editSenhaRegistro.getText().toString())){
                     mensagemErroApresentar("As senhas não coincide.");
                 }
                 else{
