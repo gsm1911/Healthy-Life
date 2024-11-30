@@ -35,6 +35,15 @@ public class ConfigActivity extends Activity {
         usuarioModel.setEmail(emailUsuario);
         usuarioModel.setSenha(senhaUsuario);
 
+        btnDelete = findViewById(R.id.btnDelete);
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(ConfigActivity.this, ConfigDeleteActivity.class);
+                startActivity(it);
+            }
+        });
+
         editSenhaAntiga = findViewById(R.id.editSenhaAntiga);
         editSenhaNova = findViewById(R.id.editSenhaNova);
         btnAtualizarSenha = findViewById(R.id.btnAtualizarSenha);
@@ -70,7 +79,9 @@ public class ConfigActivity extends Activity {
                 }
 
             }
+
         });
+
 
     }
     private void alertDialogShow(final String mensagem){

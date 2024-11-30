@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:background="@drawable/bg_edit_text_black"
-        android:layout_marginTop="552dp"
+        android:layout_marginTop="420dp"
         android:padding="10dp"
         android:hint="Senha Antiga"
         android:textColorHint="@color/white"

@@ -9,10 +9,10 @@ public abstract class AbstractDao {
     protected SQLiteDatabase db;
     protected DBOpenHelper helper;
 
-    protected final void Open(){
+    public final void Open(){
         db = helper.getWritableDatabase();
     }
-    protected  final  void Close(){
+    public   final  void Close(){
         helper.close();
     }
 

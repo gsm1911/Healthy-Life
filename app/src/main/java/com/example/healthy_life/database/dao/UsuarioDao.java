@@ -41,21 +41,6 @@ public class UsuarioDao extends AbstractDao {
 
     }
 
-    public boolean delete(final UsuarioModel usuarioModel) {
-        try {
-            Open(); // Opens the database connection
-            // Deletes rows where email and password match
-            int rowsDeleted = db.delete(
-                    UsuarioModel.TABLE_NAME,
-                    UsuarioModel.COLUNA_EMAIL + " = ? AND " + UsuarioModel.COLUNA_SENHA + " = ?",
-                    new String[]{usuarioModel.getEmail(), usuarioModel.getSenha()}
-            );
-            return rowsDeleted > 0; // Returns true if rows were deleted
-        } finally {
-            Close(); // Closes the database connection
-        }
-    }
-
     public boolean atualizarSenha(final UsuarioModel usuarioModel, final String newPassword) {
         try {
             Open(); // Opens the database connection
@@ -77,6 +62,24 @@ public class UsuarioDao extends AbstractDao {
             Close(); // Closes the database connection
         }
     }
+    public boolean deletarUsuario(final long usuarioId) {
+        try {
+            Open();
+
+            int rowsDeleted = db.delete(
+                    UsuarioModel.TABLE_NAME,
+                    UsuarioModel.COLUNA_ID + " = ?",
+                    new String[]{String.valueOf(usuarioId)}
+            );
+
+            return rowsDeleted > 0;
+        } finally {
+            Close();
+        }
+    }
+
+
+
     public long insert(final UsuarioModel usuarioModel){
 
         long resultado= -1;

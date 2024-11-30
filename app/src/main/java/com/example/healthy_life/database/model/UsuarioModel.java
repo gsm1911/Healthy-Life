@@ -1,12 +1,14 @@
 package com.example.healthy_life.database.model;
 
 public class UsuarioModel {
+
     public static String TABLE_NAME = "tb_usuarios";
     public static String
             COLUNA_ID = "_id",
             COLUNA_NOME = "nome",
             COLUNA_EMAIL = "email",
             COLUNA_SENHA = "senha";
+
     private long id;
     private String nome, email, senha;
 
