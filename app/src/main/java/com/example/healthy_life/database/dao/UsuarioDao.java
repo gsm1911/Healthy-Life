@@ -5,9 +5,11 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.Cursor;
+import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 
+import com.example.healthy_life.ConfigDeleteActivity;
 import com.example.healthy_life.LoginActivity;
 import com.example.healthy_life.R;
 import com.example.healthy_life.database.DBOpenHelper;
@@ -65,7 +67,6 @@ public class UsuarioDao extends AbstractDao {
     public boolean deletarUsuario(final long usuarioId) {
         try {
             Open();
-
             int rowsDeleted = db.delete(
                     UsuarioModel.TABLE_NAME,
                     UsuarioModel.COLUNA_ID + " = ?",

@@ -14,6 +14,8 @@ import com.example.healthy_life.database.dao.UsuarioDao;
 import com.example.healthy_life.database.model.UsuarioModel;
 
 public class ConfigDeleteActivity extends Activity {
+    public static String emailUsuario;
+    public static String senhaUsuario;
     private Button btnDeletarConta;
     private EditText editTextIdDoUsuario;
     private UsuarioDao usuarioDao;
@@ -30,6 +32,7 @@ public class ConfigDeleteActivity extends Activity {
             @Override
             public void onClick(View v) {
                 try {
+                    usuarioDao = new UsuarioDao(ConfigDeleteActivity.this);
                     usuarioDao.Open();
                     long id = Long.parseLong(editTextIdDoUsuario.getText().toString());
                     boolean deleted = usuarioDao.deletarUsuario(id);
@@ -40,7 +43,7 @@ public class ConfigDeleteActivity extends Activity {
                         startActivity(it);
 
                     } else {
-                        Toast.makeText(ConfigDeleteActivity.this, "Erro ao deletar usuário.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ConfigDeleteActivity.this, "Erro ao deletar.", Toast.LENGTH_SHORT).show();
                     }
                     usuarioDao.Close();
                 } catch (Exception e) {
